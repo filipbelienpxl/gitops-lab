@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: shop-dev
+  name: root
   namespace: argocd
 spec:
-  project: shop
+  project: default
   source:
     repoURL: https://github.com/filipbelienpxl/gitops-lab.git
     targetRevision: main
-    path: deploy/overlays/dev
+    path: argocd
   destination:
     server: https://kubernetes.default.svc
-    namespace: shop-dev
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
