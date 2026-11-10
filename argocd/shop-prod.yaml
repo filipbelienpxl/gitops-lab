@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR-USER/gitops-lab.git
+    repoURL: https://github.com/filipbelienpxl/gitops-lab.git
     targetRevision: main
     path: deploy/overlays/prod
   destination:
